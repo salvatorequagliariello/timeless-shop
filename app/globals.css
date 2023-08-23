@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url(../public/fonts/futura/stylesheet.css);
+@import url(../public/fonts/helvetica-now/stylesheet.css);
 @import url(../public/fonts/tt-barrels/stylesheet.css);
 
 html, body, :root {

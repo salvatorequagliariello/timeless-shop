@@ -10,7 +10,7 @@ module.exports = withAnimations({
     extend: {
       fontFamily: {
         barrels: ['TT Barrels'],
-        futura: ["Futura PT"]
+        helvetica: ["Helvetica Now Text"]
       },
       colors: {
         primary: "hsl(var(--color-primary) / <alpha-value>)",
