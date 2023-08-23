@@ -13,13 +13,8 @@ const Navbar = () => {
                         <Link href="/" className="flex-1">
                             <Image src={timelessLogo} width={170} alt="Timeless Company Logo" className="dark:filter dark:invert dark:grayscale"/>
                         </Link>
-                        <div className="flex gap-8">
-                            <p>
-                                Watches
-                            </p>
-                            <Link href="about">
-                                About
-                            </Link>
+                        <div className="flex gap-12">
+                            <MainNav />
                             <p>
                                 Cart
                             </p>
