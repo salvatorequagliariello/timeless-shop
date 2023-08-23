@@ -17,8 +17,9 @@ module.exports = withAnimations({
         secondary: "hsl(var(--color-secondary) / <alpha-value>)",
         hov: "hsl(var(--color-hover1) / <alpha-value>)",
         accent: {
-          1: "hsl(var(--color-accent1) / <alpha-value>)",
-          2: "hsl(var(--color-accent2) / <alpha-value>)",
+          blue1: "hsl(var(--color-accent-blue1) / <alpha-value>)",
+          blue2: "hsl(var(--color-accent-blue2) / <alpha-value>)",
+          grey1: "hsl(var(--color-accent-grey1) / <alpha-value>)",
         },
       }
     },
