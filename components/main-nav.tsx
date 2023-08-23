@@ -22,7 +22,7 @@ const MainNav: React.FC<MainNavProps> = ({
     // }))
 
     return (
-        <nav>
+        <nav className="text-primary">
             <div className="hidden md:flex md:gap-5">
                 <button onClick={() => setIsCategoriesOpen(true)}>
                     Watches
@@ -31,19 +31,21 @@ const MainNav: React.FC<MainNavProps> = ({
                     About
                 </Link>
             </div>
+
+            {/* MOBILE MENU */}
             <div>
                 <section className="flex md:hidden items-center">
-                    <p color="black" className="HAMBURGER-ICON" onClick={() => setIsNavOpen((prev) => !prev)}>
+                    <p color="black" onClick={() => setIsNavOpen((prev) => !prev)}>
                         apri
                     </p>
 
                     <div className={isNavOpen ? "showMenuNav bg-secondary" : "hideMenuNav bg-secondary"}> 
-                        <div className="w-full flex h-16 items-center place-content-end px-4">
+                        <div className="w-full flex h-16 items-center px-4">
                             <p className="w-8 h-8" onClick={() => setIsNavOpen(false)}>chiudi</p>
                         </div>
                         
-                        <ul className="flex flex-col justify-start items-left mt-4 w-full pl-6">
-                            <button onClick={() => setIsCategoriesOpen(true)} className="">
+                        <ul className="flex flex-col items-left mt-4 w-full pl-6">
+                            <button onClick={() => setIsCategoriesOpen(true)} className="text-left">
                                 Watches
                             </button>
                             <Link href="/">
@@ -54,9 +56,9 @@ const MainNav: React.FC<MainNavProps> = ({
                 </section>
             </div>
 
-
+            {/* CATEGORIES MENU */}
             <div className={isCategoriesOpen ? "showMenuNav bg-secondary" : "hideMenuNav bg-secondary"}> 
-                    <div className="w-full flex justify-between h-16 px-4">
+                    <div className="w-full flex justify-between h-16 px-4 items-center">
                         <p className="w-8 h-8" onClick={() => setIsCategoriesOpen(false)}>chiudi</p>
                         <p className="w-8 h-8"
                            onClick={() => {
