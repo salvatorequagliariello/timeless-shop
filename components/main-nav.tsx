@@ -24,7 +24,7 @@ const MainNav: React.FC<MainNavProps> = ({
     return (
         <nav>
             <div className="hidden md:flex md:gap-5">
-                <button>
+                <button onClick={() => setIsCategoriesOpen(true)}>
                     Watches
                 </button>
                 <Link href="/">
@@ -32,21 +32,44 @@ const MainNav: React.FC<MainNavProps> = ({
                 </Link>
             </div>
             <div>
-                <section className="MOBILE-MENU flex md:hidden items-center">
+                <section className="flex md:hidden items-center">
                     <p color="black" className="HAMBURGER-ICON" onClick={() => setIsNavOpen((prev) => !prev)}>
                         apri
                     </p>
 
-                    <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}> 
-                        <div className="w-full border-b flex h-16 items-center place-content-end px-4">
-                            <p className="CROSS-ICON w-8 h-8" onClick={() => setIsNavOpen(false)}>chiudi</p>
+                    <div className={isNavOpen ? "showMenuNav bg-secondary" : "hideMenuNav bg-secondary"}> 
+                        <div className="w-full flex h-16 items-center place-content-end px-4">
+                            <p className="w-8 h-8" onClick={() => setIsNavOpen(false)}>chiudi</p>
                         </div>
                         
-                        <ul className="MENU-LINK-MOBILE-OPEN flex-1 flex flex-col mt-4 w-full pl-6">
-
+                        <ul className="flex flex-col justify-start items-left mt-4 w-full pl-6">
+                            <button onClick={() => setIsCategoriesOpen(true)} className="">
+                                Watches
+                            </button>
+                            <Link href="/">
+                                About
+                            </Link>
                         </ul>
                     </div>
                 </section>
+            </div>
+
+
+            <div className={isCategoriesOpen ? "showMenuNav bg-secondary" : "hideMenuNav bg-secondary"}> 
+                    <div className="w-full flex justify-between h-16 px-4">
+                        <p className="w-8 h-8" onClick={() => setIsCategoriesOpen(false)}>chiudi</p>
+                        <p className="w-8 h-8"
+                           onClick={() => {
+                            setIsCategoriesOpen(false);
+                            setIsNavOpen(false);
+                        }}>
+                            chiudi tutto
+                        </p>
+                    </div>
+                        
+                    <ul className="flex flex-col mt-4 w-full pl-6">
+                        categories
+                    </ul>
             </div>
                 <style>
                     {`
@@ -63,8 +86,6 @@ const MainNav: React.FC<MainNavProps> = ({
                             z-index: 90;
                             display: flex;
                             flex-direction: column;
-                            justify-content: space-evenly;
-                            align-items: center;
                         }
                     `}
                 </style>
