@@ -2,6 +2,7 @@
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Link from "next/link";
+import { Menu, X } from "lucide-react";
 
 interface MainNavProps {
     data: any
@@ -24,10 +25,10 @@ const MainNav: React.FC<MainNavProps> = ({
     return (
         <nav className="text-primary">
             <div className="hidden md:flex md:gap-5">
-                <button onClick={() => setIsCategoriesOpen(true)}>
+                <button onClick={() => setIsCategoriesOpen(true)} className="hover:text-hov cursor-pointer">
                     Watches
                 </button>
-                <Link href="/">
+                <Link href="/" className="hover:text-hov cursor-pointer">
                     About
                 </Link>
             </div>
@@ -35,23 +36,27 @@ const MainNav: React.FC<MainNavProps> = ({
             {/* MOBILE MENU */}
             <div>
                 <section className="flex md:hidden items-center">
-                    <p color="black" onClick={() => setIsNavOpen((prev) => !prev)}>
-                        apri
-                    </p>
+                    <button onClick={() => setIsNavOpen((prev) => !prev)} >
+                        <Menu className="stroke-primary hover:stroke-hov cursor-pointer"  />
+                    </button>
 
-                    <div className={isNavOpen ? "showMenuNav bg-secondary" : "hideMenuNav bg-secondary"}> 
-                        <div className="w-full flex h-16 items-center px-4">
-                            <p className="w-8 h-8" onClick={() => setIsNavOpen(false)}>chiudi</p>
-                        </div>
-                        
-                        <ul className="flex flex-col items-left mt-4 w-full pl-6">
-                            <button onClick={() => setIsCategoriesOpen(true)} className="text-left">
-                                Watches
+                    <div className={isNavOpen ? "showMenuNav bg-secondary" : "hideMenuNav bg-secondary"}>
+                        <div className="flex flex-col p-8">
+                            <button 
+                                onClick={() => setIsNavOpen(false)} 
+                                className="p-2 border rounded-full border-primary max-w-max hover:border-hov ">
+                                <X className="h-5 w-5 hover:stroke-hov cursor-pointer"/>
                             </button>
-                            <Link href="/">
-                                About
-                            </Link>
-                        </ul>
+                            
+                            <ul className="flex flex-col items-left mt-12 text-xl">
+                                <button onClick={() => setIsCategoriesOpen(true)} className="text-left hover:text-hov cursor-pointer">
+                                    Watches
+                                </button>
+                                <Link href="/" className="text-left hover:text-hov cursor-pointer">
+                                    About
+                                </Link>
+                            </ul>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -86,8 +91,6 @@ const MainNav: React.FC<MainNavProps> = ({
                             top: 0;
                             left: 0;
                             z-index: 90;
-                            display: flex;
-                            flex-direction: column;
                         }
                     `}
                 </style>
