@@ -8,3 +8,31 @@
 html, body, :root {
   height: 100%;
 }
+
+@layer base {
+  :root {
+    --color-primary: 240deg 6% 10%;
+    --color-secondary: 210deg 40% 96%;
+    --color-hover1: 215deg 14% 34%;
+    --color-accent1: 226deg 57% 21%;
+    --color-accent2: 226deg 71% 40%;
+  }
+
+  @media (prefers-color-scheme:dark) {
+    :root {
+      --color-primary: 210deg 40% 96%;
+      --color-secondary: 240deg 6% 10%;
+      --color-hover1: 215deg 14% 34%;
+      --color-accent1: 226deg 57% 21%;
+      --color-accent2: 226deg 71% 40%;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --color-primary: 210deg 40% 96%;
+    --color-secondary: 240deg 6% 10%;
+    --color-hover1: 215deg 14% 34%;
+    --color-accent1: 226deg 57% 21%;
+    --color-accent2: 226deg 71% 40%;
+  }
+}

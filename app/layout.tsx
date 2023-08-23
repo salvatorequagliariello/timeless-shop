@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-futura">
+      <body className="font-futura bg-secondary">
         {children}
         <Footer />
       </body>
