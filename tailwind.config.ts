@@ -9,8 +9,9 @@ module.exports = withAnimations({
   theme: {
     extend: {
       fontFamily: {
-        barrels: ['TT Barrels'],
-        helvetica: ["Helvetica Now Text"]
+        primary: ["Futura PT"],
+        primaryb: ["Futura PT Book"],
+        secondary: ['TT Barrels'],
       },
       colors: {
         primary: "hsl(var(--color-primary) / <alpha-value>)",
