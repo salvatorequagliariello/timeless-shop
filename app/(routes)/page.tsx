@@ -1,8 +1,9 @@
+import Hero from "@/components/hero";
 
 const HomePage = () => {
     return (
         <div className="text-primary hover-hov">
-            Hello store!
+            <Hero />
         </div>
     )
 };
