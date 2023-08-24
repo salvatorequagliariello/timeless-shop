@@ -2,23 +2,21 @@
 
 import { Sliders } from "lucide-react";
 import Container from "./ui/container";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import next from "next";
 
 const slides = [
-    "./assets/videos/clock-close-up.webm",
-    
+    {
+        image: "./assets/videos/clock-close-up.webm",
+        bannertext: "Prestige Collection"
+    },
+    {
+        image: "./assets/videos/hand-watch.webm",
+        bannertext: "Seaside Collection"
+    },
 ];
 
-const banners = [
-    <div className="w-32 absolute bottom-32 left-0 font-secondary text-primary font-semibold text-7xl animate-fadeInRight">
-        Prestige Collection
-        <button className="font-primaryb text-xl text-secondary bg-primary py-2 px-8 hover:bg-hov">
-            Discover
-        </button>
-    </div>,
-];
-
-const Hero = () => {
+const Hero: React.FC = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const prevSlide = () => {
@@ -38,18 +36,31 @@ const Hero = () => {
     }
 
 
+    useEffect(() => {
+        setTimeout(
+          () => nextSlide(), 10000);
+    
+        return () => {};
+      }, [currentIndex]);
+
     return (
             <div className="flex items-center justify-center mx-auto animate-fadeInDown">
                 <div className="relative">
-                    <video 
+                    {<video
+                        key={currentIndex}
                         muted 
                         autoPlay 
                         loop 
                         className="w-full h-[450px] rounded-b-[15%] min-[500px]:h-[500px] min-[500px]:rounded-b-[300px] md:rounded-b-[400px]
-                        lg:rounded-b-[400px] lg:w-[1024px] xl:h-[600px] xl:rounded-b-full xl:w-full min-[1470px]:h-[620px] min-[1600px]:h-[700px] min-[1900px]:h-[850px] object-cover">
-                            <source src={slides[currentIndex]} type="video/webm" aria-label="Watch ticking video" />
-                    </video>
-                    {banners[0]}            
+                        lg:rounded-b-[400px] lg:w-[1024px] xl:h-[600px] xl:rounded-b-full xl:w-full min-[1470px]:h-[620px] min-[1600px]:h-[700px] min-[1900px]:h-[850px] object-cover animate-fadeIn animate-faster">
+                            <source src={slides[currentIndex].image} type="video/webm" aria-label="Watch ticking video" />
+                    </video>}
+                        <div className="w-32 absolute bottom-32 left-0 font-secondary text-primary font-semibold text-7xl animate-fadeIn animate-slower">
+                            {slides[currentIndex].bannertext}
+                        <button className="font-primaryb text-xl text-secondary bg-primary py-2 px-8 hover:bg-hov">
+                            Discover
+                        </button>
+                    </div>,      
                 </div>
             </div>
     );
