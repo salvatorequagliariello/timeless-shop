@@ -47,20 +47,24 @@ const Hero: React.FC = () => {
             <div className="flex items-center justify-center mx-auto animate-fadeInDown">
                 <div className="relative">
                     {<video
-                        key={currentIndex}
+                        key={slides[currentIndex].image}
                         muted 
                         autoPlay 
                         loop 
                         className="w-full h-[450px] rounded-b-[15%] min-[500px]:h-[500px] min-[500px]:rounded-b-[300px] md:rounded-b-[400px]
-                        lg:rounded-b-[400px] lg:w-[1024px] xl:h-[600px] xl:rounded-b-full xl:w-full min-[1470px]:h-[620px] min-[1600px]:h-[700px] min-[1900px]:h-[850px] object-cover animate-fadeIn animate-faster">
+                        lg:rounded-b-[400px] lg:w-[1024px] xl:h-[600px] xl:rounded-b-full xl:w-full min-[1470px]:h-[620px] min-[1600px]:h-[700px] min-[1900px]:h-[850px] object-cover animate-fadeIn animate-slower">
                             <source src={slides[currentIndex].image} type="video/webm" aria-label="Watch ticking video" />
                     </video>}
-                        <div className="w-32 absolute bottom-32 left-0 font-secondary text-primary font-semibold text-7xl animate-fadeIn animate-slower">
+                    <div 
+                        key={currentIndex} 
+                        className="flex flex-col gap-y-2 my-4 mx-auto items-center place-content-center lg:w-32 lg:absolute lg:bottom-4  lg:left-4 text-primary animate-fadeInLeft">
+                        <h1 className="font-semibold min text-4xl lg:text-6xl xl:text-7xl font-secondary mx-auto text-center lg:text-start">
                             {slides[currentIndex].bannertext}
-                        <button className="font-primaryb text-xl text-secondary bg-primary py-2 px-8 hover:bg-hov">
+                        </h1>
+                        <button className="font-primaryb lg:text-md xl:text-xl text-secondary bg-primary py-2 px-8 hover:bg-hov text-center place-self-center">
                             Discover
                         </button>
-                    </div>,      
+                    </div>      
                 </div>
             </div>
     );
