@@ -12,7 +12,7 @@ const slides = [
     },
     {
         image: "./assets/videos/hand-watch.webm",
-        bannertext: "Seaside Collection"
+        bannertext: "Seawatcher Collection"
     },
     {
         image: "./assets/videos/woman-wristwatch-close-up.webm",
