@@ -15,11 +15,23 @@ const HomePageContent = () => {
                         </Link>
                 </div>
             </div>
-                <div className="flex flex-col gap-y-4 min-[830px]:flex-row w-full lg:h-[400px] gap-x-8">
+                <div className="flex flex-col gap-y-4 min-[830px]:flex-row w-full lg:h-[450px] gap-x-8">
                     <img src="./assets/images/homepage-content/starfinder-s01.png" className="w-full h-[250px] min-[670px]:h-[300px] lg:h-full min-[830px]:w-[50%] object-cover animate-fadeInLeft"/>
                     <div className="flex-1 flex flex-col items-center text-center place-content-center animate-fadeInRight break-words">
                         <h2 className="font-secondary text-3xl lg:text-5xl">Starfinder S01</h2>
                         <p>The perfect blend of tradition and performance for a sporty-elegant style.</p>
+                        <button className="font-primaryb mt-4 text-md xl:text-xl text-secondary bg-primary py-2 px-8 hover:bg-hov text-center place-self-center">
+                            <Link href={"/"}>
+                                    Discover
+                            </Link>
+                        </button>
+                    </div>
+                </div>
+                <div className="flex flex-col gap-y-4 min-[830px]:flex-row-reverse w-full lg:h-[450px] gap-x-8">
+                    <img src="./assets/images/homepage-content/planetocean-p97.webp" className="w-full h-[250px] min-[670px]:h-[300px] lg:h-full min-[830px]:w-[50%] object-cover animate-fadeInLeft"/>
+                    <div className="flex-1 flex flex-col items-center text-center place-content-center animate-fadeInRight break-words">
+                        <h2 className="font-secondary text-3xl lg:text-5xl">Planetocean P97</h2>
+                        <p>Inspired by the unique requirements of this sport, Planetocean timepieces preserve the traditional style of diving watches.</p>
                         <button className="font-primaryb mt-4 text-md xl:text-xl text-secondary bg-primary py-2 px-8 hover:bg-hov text-center place-self-center">
                             <Link href={"/"}>
                                     Discover
