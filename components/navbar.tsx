@@ -8,9 +8,9 @@ import { ShoppingBag } from 'lucide-react';
 const Navbar = () => {
 
     return (
-            <div className="py-4 md:py-7 text-primary font-helvetica">
+            <div className="fixed w-full bg-secondary py-4 md:py-7 text-primary font-helvetica z-20">
                 <Container>
-                    <div className="flex items-center mx-auto px-4 md:px-10 max-w-6xl justify-between">
+                    <div className="flex items-center mx-auto px-4 md:px-10 max-w-6xl justify-between animate-fadeInUp">
                         <Link href="/" className="flex-1">
                             <Image src={timelessLogo} width={170} alt="Timeless Company Logo" className="dark:filter dark:invert dark:grayscale"/>
                         </Link>
