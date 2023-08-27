@@ -18,8 +18,8 @@ const HomePageContent = () => {
                 <div className="flex flex-col gap-y-4 min-[830px]:flex-row w-full lg:h-[450px] gap-x-8">
                     <img src="./assets/images/homepage-content/starfinder-s01.png" className="w-full h-[250px] min-[670px]:h-[300px] lg:h-full min-[830px]:w-[50%] object-cover animate-fadeInLeft"/>
                     <div className="flex-1 flex flex-col items-center text-center place-content-center animate-fadeInRight break-words">
-                        <h2 className="font-secondary text-3xl lg:text-5xl">Starfinder S01</h2>
-                        <p>The perfect blend of tradition and performance for a sporty-elegant style.</p>
+                        <h2 className="font-secondary text-primary text-3xl lg:text-5xl">Starfinder S01</h2>
+                        <p className="text-primary">The perfect blend of tradition and performance for a sporty-elegant style.</p>
                         <button className="font-primaryb mt-4 text-md xl:text-xl text-secondary bg-primary py-2 px-8 hover:bg-hov text-center place-self-center">
                             <Link href={"/"}>
                                     Discover
@@ -28,10 +28,10 @@ const HomePageContent = () => {
                     </div>
                 </div>
                 <div className="flex flex-col gap-y-4 min-[830px]:flex-row-reverse w-full lg:h-[450px] gap-x-8">
-                    <img src="./assets/images/homepage-content/planetocean-p97.webp" className="w-full h-[250px] min-[670px]:h-[300px] lg:h-full min-[830px]:w-[50%] object-cover animate-fadeInLeft"/>
-                    <div className="flex-1 flex flex-col items-center text-center place-content-center animate-fadeInRight break-words">
-                        <h2 className="font-secondary text-3xl lg:text-5xl">Planetocean P97</h2>
-                        <p>Inspired by the unique requirements of this sport, Planetocean timepieces preserve the traditional style of diving watches.</p>
+                    <img src="./assets/images/homepage-content/planetocean-p97.webp" className="w-full h-[250px] min-[670px]:h-[300px] lg:h-full min-[830px]:w-[50%] object-cover animate-fadeInRight"/>
+                    <div className="flex-1 flex flex-col items-center text-center place-content-center animate-fadeInLeft break-words">
+                        <h2 className="font-secondary text-primary text-3xl lg:text-5xl">Planetocean P97</h2>
+                        <p className="text-primary">Inspired by the unique requirements of this sport, Planetocean timepieces preserve the traditional style of diving watches.</p>
                         <button className="font-primaryb mt-4 text-md xl:text-xl text-secondary bg-primary py-2 px-8 hover:bg-hov text-center place-self-center">
                             <Link href={"/"}>
                                     Discover
@@ -39,15 +39,15 @@ const HomePageContent = () => {
                         </button>
                     </div>
                 </div>
-                <div>
+                <div className="relative">
                     <video
                         muted 
                         autoPlay 
                         loop 
-                        className="w-full h-[450px] rounded-b-[15%] min-[500px]:h-[500px] min-[500px]:rounded-b-[300px] md:rounded-b-[400px]
-                        lg:rounded-b-[400px] lg:w-[1024px] xl:h-[600px] xl:rounded-b-full xl:w-full min-[1470px]:h-[620px] min-[1600px]:h-[700px] min-[1900px]:h-[850px] object-cover animate-fadeIn animate-slower">
+                        className="h-[350px] lg:h-[450px] w-full object-cover animate-fadeIn animate-slower">
                             <source src="./assets/images/homepage-content/rolling-watches.webm" type="video/webm" aria-label="Some watches" />
                     </video>
+                    <h2 className="absolute bottom-8 left-4 font-secondary text-slate-50 text-4xl lg:text-6xl px-2">Beautifully crafted Timepieces.</h2>
                 </div>
         </div>
     );
