@@ -4,8 +4,12 @@ import timelessLogo from "@/public/assets/images/timeless-logo.png";
 import Link from "next/link";
 import MainNav from "@/components/main-nav";
 import { ShoppingBag } from 'lucide-react';
+import getCategories from "@/actions/get-categories";
 
-const Navbar = () => {
+export const revalidate = 0;
+
+const Navbar = async () => {
+    const categories = await getCategories();
 
     return (
             <div className="fixed w-full bg-secondary py-4 md:py-7 text-primary font-helvetica z-20">
@@ -15,7 +19,7 @@ const Navbar = () => {
                             <Image src={timelessLogo} width={170} alt="Timeless Company Logo" className="dark:filter dark:invert dark:grayscale"/>
                         </Link>
                         <div className="flex flex-row-reverse md:flex-row gap-4 md:gap-12">
-                            <MainNav data={[]}/>
+                            <MainNav data={categories}/>
                             <ShoppingBag className="stroke-primary hover:stroke-hov cursor-pointer" />
                         </div>
                     </div>
