@@ -3,9 +3,10 @@ import { useState } from "react";
 import Link from "next/link";
 import { ChevronLeft, Menu, X } from "lucide-react";
 import CategoriesNav from "./categories-nav";
+import { Category } from "@/types";
 
 interface MainNavProps {
-    data: any
+    data: Category[];
 }
 
 
@@ -74,7 +75,7 @@ const MainNav: React.FC<MainNavProps> = ({
                             </button>
                         </div>
                         <div>
-                            <CategoriesNav data={[]}/>
+                            <CategoriesNav data={data}/>
                         </div>           
                     </div>
                 </div>

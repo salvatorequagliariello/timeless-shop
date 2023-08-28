@@ -1,8 +1,10 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { Category } from "@/types";
 
 interface CategoriesNavProps {
-    data: any
+    data: Category[];
 };
 
 const CategoriesNav: React.FC<CategoriesNavProps> = ({
@@ -25,7 +27,9 @@ const CategoriesNav: React.FC<CategoriesNavProps> = ({
                 {routes.map((route) => (
                     <Link
                     key={route.href}
-                    href={route.href}>
+                    href={route.href}
+                    className={cn(route.active ? "text-neutral-500" : "text-primary")}>
+                        {route.label}
                     </Link>
                 ))}
             </nav>
