@@ -1,8 +1,8 @@
 "use client";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Link from "next/link";
 import { ChevronLeft, Menu, X } from "lucide-react";
+import CategoriesNav from "./categories-nav";
 
 interface MainNavProps {
     data: any
@@ -14,13 +14,6 @@ const MainNav: React.FC<MainNavProps> = ({
 }) => {    
     const [isNavOpen, setIsNavOpen] = useState(false);
     const [isCategoriesOpen, setIsCategoriesOpen] = useState(false);
-    const pathname = usePathname();
-
-    // const routes = data.map(route => ({
-    //     href: `/category${route.id}`,
-    //     label: route.name,
-    //     active: pathname === `/category${route.id}`
-    // }))
 
     return (
         <nav className="text-primary">
@@ -65,25 +58,24 @@ const MainNav: React.FC<MainNavProps> = ({
             <div>
                 <div className={isCategoriesOpen ? "showMenuNav bg-secondary" : "hideMenuNav bg-secondary"}>
                     <div className="flex flex-col p-8">
-                    <div className="w-full flex justify-between items-center">
-                        <button 
-                            onClick={() => setIsCategoriesOpen(false)}
-                            className="p-2 border rounded-full border-primary max-w-max hover:border-hov ">
-                            <ChevronLeft className="h-5 w-5 hover:stroke-hov cursor-pointer" />
-                        </button>
-                        <button 
-                            onClick={() => {
-                                setIsCategoriesOpen(false);
-                                setIsNavOpen(false);
-                            }}
-                            className="md:hidden p-2 border rounded-full border-primary max-w-max hover:border-hov ">
-                                <X className="h-5 w-5 hover:stroke-hov cursor-pointer"/>
-                        </button>
-                    </div>
-                    
-                        <ul className="flex flex-col mt-4 w-full pl-6">
-                            categories
-                        </ul>
+                        <div className="w-full flex justify-between items-center">
+                            <button 
+                                onClick={() => setIsCategoriesOpen(false)}
+                                className="p-2 border rounded-full border-primary max-w-max hover:border-hov ">
+                                <ChevronLeft className="h-5 w-5 hover:stroke-hov cursor-pointer" />
+                            </button>
+                            <button 
+                                onClick={() => {
+                                    setIsCategoriesOpen(false);
+                                    setIsNavOpen(false);
+                                }}
+                                className="md:hidden p-2 border rounded-full border-primary max-w-max hover:border-hov ">
+                                    <X className="h-5 w-5 hover:stroke-hov cursor-pointer"/>
+                            </button>
+                        </div>
+                        <div>
+                            <CategoriesNav data={[]}/>
+                        </div>           
                     </div>
                 </div>
             </div>

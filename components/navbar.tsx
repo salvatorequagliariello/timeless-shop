@@ -15,7 +15,7 @@ const Navbar = () => {
                             <Image src={timelessLogo} width={170} alt="Timeless Company Logo" className="dark:filter dark:invert dark:grayscale"/>
                         </Link>
                         <div className="flex flex-row-reverse md:flex-row gap-4 md:gap-12">
-                            <MainNav />
+                            <MainNav data={[]}/>
                             <ShoppingBag className="stroke-primary hover:stroke-hov cursor-pointer" />
                         </div>
                     </div>
