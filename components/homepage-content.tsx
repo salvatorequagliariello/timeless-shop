@@ -28,7 +28,7 @@ const HomePageContent = () => {
                     </div>
                 </div>
                 <div className="flex flex-col gap-y-4 min-[830px]:flex-row-reverse w-full lg:h-[450px] gap-x-8">
-                    <img src="./assets/images/homepage-content/planetocean-p97.webp" className="w-full h-[250px] min-[670px]:h-[300px] lg:h-full min-[830px]:w-[50%] object-cover animate-fadeInRight"/>
+                    <img key={1} src="./assets/images/homepage-content/planetocean-p97.webp" className="w-full h-[250px] min-[670px]:h-[300px] lg:h-full min-[830px]:w-[50%] object-cover animate-fadeInRight"/>
                     <div className="flex-1 flex flex-col items-center text-center place-content-center animate-fadeInLeft break-words">
                         <h2 className="font-secondary text-primary text-3xl lg:text-5xl">Planetocean P97</h2>
                         <p className="text-primary">Inspired by the unique requirements of this sport, Planetocean timepieces preserve the traditional style of diving watches.</p>
