@@ -6,8 +6,8 @@ import MainNav from "@/components/main-nav";
 import { ShoppingBag } from 'lucide-react';
 import getCategories from "@/actions/get-categories";
 import { cn } from "@/lib/utils";
+import Cart from "@/components/cart";
 
-export const revalidate = 0;
 
 const Navbar = async () => {
     const categories = await getCategories();
@@ -22,16 +22,7 @@ const Navbar = async () => {
                         </Link>
                         <div className="flex flex-row-reverse md:flex-row gap-4 md:gap-12 items-center">
                             <MainNav data={categories}/>
-                            <button>
-                                <div className="relative flex items-end gap-x-1">
-                                    <ShoppingBag size={20} className={cn("stroke-primary hover:stroke-hov cursor-pointer")} />
-                                    <span 
-                                    className={cn("-top-2 -right-[7px] text-[12px] text-slate-50 bg-blue-800 font-primary px-1 py-[0.5px]", 
-                                    cartItems >= 1 ? "absolute" : "hidden")}>
-                                        {cartItems}
-                                    </span>
-                                </div>
-                            </button>
+                            <Cart />
                         </div>
                     </div>
                 </Container>
