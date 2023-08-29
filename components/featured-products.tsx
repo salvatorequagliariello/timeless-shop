@@ -32,7 +32,7 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
         <div>
 
             <div className="hidden md:block">
-                <h3 className="text-primary font-secondary text-3xl text-center">Featured Products</h3>
+                <h3 className="text-primary font-secondary text-3xl text-center">Best Sellers</h3>
                 {items.length === 0 && <NoResults />}
                 <div className="flex justify-center xl:w-[70%] m-auto mt-4">
                     {items.map((item) => (
@@ -43,7 +43,7 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
 
 
             <div className="block md:hidden">
-                <h3 className="text-primary font-secondary text-2xl sm:text-3xl">Featured Products</h3>
+                <h3 className="text-primary font-secondary text-2xl sm:text-3xl text-center">Best Sellers</h3>
                 <div className="relative w-full min-[500px]:w-[70%] mx-auto">
                     <div
                         key={currentIndex}
@@ -51,10 +51,10 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
                         >
                         <FeaturedProductCard key={items[currentIndex].id} data={items[currentIndex]}/>
                     </div>
-                    <div className='absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-primary cursor-pointer z-20'>
+                    <div className='absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-primary cursor-pointer z-20 hover:text-hov'>
                         <ChevronLeft onClick={prevSlide} size={30} />
                     </div>
-                    <div className='absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-primary cursor-pointer z-20'>
+                    <div className='absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-primary cursor-pointer z-20 hover:text-hov'>
                         <ChevronRight onClick={nextSlide} size={30} />
                     </div>
                 </div>

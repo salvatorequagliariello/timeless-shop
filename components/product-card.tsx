@@ -1,18 +1,13 @@
-"use client";
-
-import { cn } from "@/lib/utils";
 import { Product } from "@/types";
 import Currency from "@/components/ui/currency";
 import { useRouter } from "next/navigation";
 
-interface FeaturedProductCardProps {
+interface ProductCardProps {
     data: Product;
-    className?: string;
 }
 
-const FeaturedProductCard: React.FC<FeaturedProductCardProps> = ({
+const ProductCard: React.FC<ProductCardProps> = ({
     data,
-    className,
 }) => {
     const router = useRouter();
 
@@ -21,7 +16,7 @@ const FeaturedProductCard: React.FC<FeaturedProductCardProps> = ({
     }
 
     return (    
-        <article className={cn(className ? className : "text-primary font-primaryb items-center flex flex-col m-auto gap-y-2 cursor-pointer")} onClick={handleClick}>
+        <article className="text-primary font-primaryb items-center flex flex-col m-auto gap-y-2 cursor-pointer" onClick={handleClick}>
             <div className="md:h-72 w-30">
                 <img   
                     src={data?.images?.[0]?.url}
@@ -52,4 +47,4 @@ const FeaturedProductCard: React.FC<FeaturedProductCardProps> = ({
     );
 };
 
-export default FeaturedProductCard;
+export default ProductCard;
