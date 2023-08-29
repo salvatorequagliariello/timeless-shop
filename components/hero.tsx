@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
                         <h1 className="font-semibold min text-4xl lg:text-6xl xl:text-7xl font-secondary mx-auto text-center lg:text-start">
                             {slides[currentIndex].bannertext}
                         </h1>
-                        <button className="font-primaryb lg:text-md xl:text-xl text-secondary bg-primary py-2 px-8 hover:bg-hov text-center place-self-center">
+                        <button className="font-primaryb lg:text-md xl:text-xl text-secondary bg-primary py-2 px-8 hover:bg-hov transition text-center place-self-center">
                             Discover
                         </button>
                     </div>      

@@ -8,6 +8,7 @@ import getCategories from "@/actions/get-categories";
 import { cn } from "@/lib/utils";
 import Cart from "@/components/cart";
 
+export const revalidate = 0;
 
 const Navbar = async () => {
     const categories = await getCategories();
