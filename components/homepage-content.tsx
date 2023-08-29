@@ -1,8 +1,12 @@
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import FeaturedProducts from "./featured-products";
+import getProducts from "@/actions/get-products";
 
-const HomePageContent = () => {
+const HomePageContent = async () => {
+    const featuredProducts =  await getProducts({ isFeatured: true });
+
     return (
         <div className="mt-32 w-[85%] min-[1950px]:w-full mx-auto flex flex-col gap-y-16 flex-wrap text-primary break-words">
             <div className="relative">
@@ -15,40 +19,41 @@ const HomePageContent = () => {
                         </Link>
                 </div>
             </div>
-                <div className="flex flex-col gap-y-4 min-[830px]:flex-row w-full lg:h-[450px] gap-x-8">
-                    <img src="./assets/images/homepage-content/starfinder-s01.png" className="w-full h-[250px] min-[670px]:h-[300px] lg:h-full min-[830px]:w-[50%] object-cover animate-fadeInLeft"/>
-                    <div className="flex-1 flex flex-col items-center text-center place-content-center animate-fadeInRight break-words">
-                        <h2 className="font-secondary text-primary text-3xl lg:text-5xl">Starfinder S01</h2>
-                        <p className="text-primary">The perfect blend of tradition and performance for a sporty-elegant style.</p>
-                        <button className="font-primaryb mt-4 text-md xl:text-xl text-secondary bg-primary py-2 px-8 hover:bg-hov text-center place-self-center">
-                            <Link href={"/"}>
-                                    Discover
-                            </Link>
-                        </button>
-                    </div>
+            <FeaturedProducts items={featuredProducts}/>
+            <div className="flex flex-col gap-y-4 min-[830px]:flex-row w-full lg:h-[450px] gap-x-8">
+                <img src="./assets/images/homepage-content/starfinder-s01.png" className="w-full h-[250px] min-[670px]:h-[300px] lg:h-full min-[830px]:w-[50%] object-cover animate-fadeInLeft"/>
+                <div className="flex-1 flex flex-col items-center text-center place-content-center animate-fadeInRight break-words">
+                    <h2 className="font-secondary text-primary text-3xl lg:text-5xl">Starfinder S01</h2>
+                    <p className="text-primary">The perfect blend of tradition and performance for a sporty-elegant style.</p>
+                    <button className="font-primaryb mt-4 text-md xl:text-xl text-secondary bg-primary py-2 px-8 hover:bg-hov text-center place-self-center">
+                        <Link href={"/"}>
+                                Discover
+                        </Link>
+                    </button>
                 </div>
-                <div className="flex flex-col gap-y-4 min-[830px]:flex-row-reverse w-full lg:h-[450px] gap-x-8">
-                    <img key={1} src="./assets/images/homepage-content/planetocean-p97.webp" className="w-full h-[250px] min-[670px]:h-[300px] lg:h-full min-[830px]:w-[50%] object-cover animate-fadeInRight"/>
-                    <div className="flex-1 flex flex-col items-center text-center place-content-center animate-fadeInLeft break-words">
-                        <h2 className="font-secondary text-primary text-3xl lg:text-5xl">Planetocean P97</h2>
-                        <p className="text-primary">Inspired by the unique requirements of this sport, Planetocean timepieces preserve the traditional style of diving watches.</p>
-                        <button className="font-primaryb mt-4 text-md xl:text-xl text-secondary bg-primary py-2 px-8 hover:bg-hov text-center place-self-center">
-                            <Link href={"/"}>
-                                    Discover
-                            </Link>
-                        </button>
-                    </div>
+            </div>
+            <div className="flex flex-col gap-y-4 min-[830px]:flex-row-reverse w-full lg:h-[450px] gap-x-8">
+                <img key={1} src="./assets/images/homepage-content/planetocean-p97.webp" className="w-full h-[250px] min-[670px]:h-[300px] lg:h-full min-[830px]:w-[50%] object-cover animate-fadeInRight"/>
+                <div className="flex-1 flex flex-col items-center text-center place-content-center animate-fadeInLeft break-words">
+                    <h2 className="font-secondary text-primary text-3xl lg:text-5xl">Planetocean P97</h2>
+                    <p className="text-primary">Inspired by the unique requirements of this sport, Planetocean timepieces preserve the traditional style of diving watches.</p>
+                    <button className="font-primaryb mt-4 text-md xl:text-xl text-secondary bg-primary py-2 px-8 hover:bg-hov text-center place-self-center">
+                        <Link href={"/"}>
+                                Discover
+                        </Link>
+                    </button>
                 </div>
-                <div className="relative">
-                    <video
-                        muted 
-                        autoPlay 
-                        loop 
-                        className="h-[350px] lg:h-[450px] w-full object-cover animate-fadeIn animate-slower">
-                            <source src="./assets/images/homepage-content/rolling-watches.webm" type="video/webm" aria-label="Some watches" />
-                    </video>
-                    <h2 className="absolute bottom-8 left-4 font-secondary text-slate-50 text-4xl lg:text-6xl px-2">Beautifully crafted Timepieces.</h2>
-                </div>
+            </div>
+            <div className="relative">
+                <video
+                    muted 
+                    autoPlay 
+                    loop 
+                    className="h-[350px] lg:h-[450px] w-full object-cover animate-fadeIn animate-slower">
+                        <source src="./assets/images/homepage-content/rolling-watches.webm" type="video/webm" aria-label="Some watches" />
+                </video>
+                <h2 className="absolute bottom-8 left-4 font-secondary text-slate-50 text-4xl lg:text-6xl px-2">Beautifully crafted Timepieces.</h2>
+            </div>
         </div>
     );
 };
