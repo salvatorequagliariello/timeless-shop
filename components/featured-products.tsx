@@ -15,7 +15,7 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
 }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const autoSlide = true;
-    const autoSlideInterval = 5000;
+    const autoSlideInterval = 10000;
 
     const prevSlide = () =>
       setCurrentIndex((current) => (current === 0 ? items.length - 1 : current - 1))
@@ -43,8 +43,8 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
 
 
             <div className="block md:hidden">
-                <h3 className="text-primary font-secondary text-3xl">Featured Products</h3>
-                <div className="relative w-full">
+                <h3 className="text-primary font-secondary text-2xl sm:text-3xl">Featured Products</h3>
+                <div className="relative w-full min-[500px]:w-[70%] mx-auto">
                     <div
                         key={currentIndex}
                         className='animate-fadeIn'

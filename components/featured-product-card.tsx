@@ -6,21 +6,19 @@ import { Product } from "@/types";
 interface FeaturedProductCard {
     data: Product;
     className?: string;
-    imgClassName?: string;
 }
 
 const FeaturedProductCard: React.FC<FeaturedProductCard> = ({
     data,
     className,
-    imgClassName
 }) => {
     return (    
         <article className={cn(className ? className : "text-primary font-primaryb items-center flex flex-col m-auto gap-y-2 cursor-pointer")}>
-            <div className={cn(imgClassName ? imgClassName : "h-72 w-30")}>
+            <div className="md:h-72 w-30">
                 <img   
                     src={data?.images?.[0]?.url}
                     alt={`${data?.name} wristwatch image.`}
-                    className="h-full w-full object-contain"
+                    className= "h-56 md:h-full md:w-full object-contain"
                     />
             </div>
             <div className="text-center">
@@ -39,7 +37,7 @@ const FeaturedProductCard: React.FC<FeaturedProductCard> = ({
                     </p>
                 </div>
             </div>
-                <button className="mt-4 w-max m-auto bg-primary text-secondary transition py-2 px-4 hover:bg-hov">
+                <button className="mt-4 w-max m-auto bg-primary text-secondary transition py-2 px-4 hover:bg-hov text-sm lg:text-md">
                     SHOP NOW
                 </button>
         </article>
