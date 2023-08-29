@@ -14,9 +14,9 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
 
     return (
         <div>
-            <h3>Featured Products</h3>
+            <h3 className="text-primary font-secondary text-3xl text-center">Featured Products</h3>
             {items.length === 0 && <NoResults />}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="flex justify-center xl:w-[70%] m-auto mt-4">
                 {items.map((item) => (
                     <FeaturedProductCard key={item.id} data={item} />
                 ))}
