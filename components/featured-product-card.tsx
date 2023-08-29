@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { Product } from "@/types";
+import Currency from "@/components/ui/currency";
 
 interface FeaturedProductCard {
     data: Product;
@@ -33,7 +34,7 @@ const FeaturedProductCard: React.FC<FeaturedProductCard> = ({
                     {data?.movement?.name}
                     </p>
                     <p className="font-primary opacity-80">
-                        $ {data?.price}.00
+                        <Currency value={data?.price} />
                     </p>
                 </div>
             </div>
