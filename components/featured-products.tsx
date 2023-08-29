@@ -1,5 +1,6 @@
 import { Product } from "@/types";
 import NoResults from "@/components/no-results";
+import FeaturedProductCard from "@/components/featured-product-card";
 
 interface FeaturedProductsProps {
     items: Product[];
@@ -17,9 +18,7 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
             {items.length === 0 && <NoResults />}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {items.map((item) => (
-                    <div key={item.id}>
-                        {item.name}
-                    </div>
+                    <FeaturedProductCard key={item.id} data={item} />
                 ))}
             </div>
         </div>
