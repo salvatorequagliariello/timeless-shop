@@ -1,17 +1,22 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import { Product } from "@/types";
 
 interface FeaturedProductCard {
     data: Product;
+    className?: string;
+    imgClassName?: string;
 }
 
 const FeaturedProductCard: React.FC<FeaturedProductCard> = ({
-    data
+    data,
+    className,
+    imgClassName
 }) => {
     return (    
-        <article className="text-primary font-primaryb flex flex-col m-auto gap-y-2 cursor-pointer">
-            <div className="h-72 w-30">
+        <article className={cn(className ? className : "text-primary font-primaryb items-center flex flex-col m-auto gap-y-2 cursor-pointer")}>
+            <div className={cn(imgClassName ? imgClassName : "h-72 w-30")}>
                 <img   
                     src={data?.images?.[0]?.url}
                     alt={`${data?.name} wristwatch image.`}
@@ -34,7 +39,7 @@ const FeaturedProductCard: React.FC<FeaturedProductCard> = ({
                     </p>
                 </div>
             </div>
-                <button className="mt-4 w-max m-auto bg-primary text-secondary py-2 px-4 hover:bg-hov">
+                <button className="mt-4 w-max m-auto bg-primary text-secondary transition py-2 px-4 hover:bg-hov">
                     SHOP NOW
                 </button>
         </article>
