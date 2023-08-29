@@ -6,7 +6,7 @@ interface ProductsListProps {
     items: Product[];
 }
 
-const FeaturedProducts: React.FC<ProductsListProps> = ({
+const ProductsList: React.FC<ProductsListProps> = ({
     items
 }) => {
     return (
@@ -23,3 +23,5 @@ const FeaturedProducts: React.FC<ProductsListProps> = ({
         </div>
     );
 };
+
+export default ProductsList;
