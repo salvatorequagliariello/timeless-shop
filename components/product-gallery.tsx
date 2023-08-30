@@ -29,17 +29,17 @@ const ProductGallery: React.FC<GalleryProps> = ({
     }, [])
 
     return (
-        <div className="w-full h-[600px] relative mx-auto">
-                <h1 className="absolute font-secondary text-8xl left-[50%] translate-x-[-50%] bottom-8">
+        <div className="w-full lg:-[600px] relative mx-auto">
+                <h1 className="w-full text-center absolute font-secondary text-3xl md:text-5xl lg:text-8xl left-[50%] translate-x-[-50%] bottom-8">
                     {productName}
                 </h1>
                 <div
                     key={currentIndex}
                     className='w-auto mx-auto flex place-content-center animate-fadeIn'
                     >
-                    <img key={images[currentIndex].id} src={images[currentIndex].url}  className="h-[600px]" />
+                    <img key={images[currentIndex].id} src={images[currentIndex].url}  className="h-[350px] md:h-[450px] lg:h-[600px]" />
                 </div>
-                <div className="w-96 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex justify-between">
+                <div className="w-72 lg:w-96 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex justify-between">
                     <div className='text-primary cursor-pointer z-20 hover:text-hov'>
                         <ChevronLeft onClick={prevSlide} size={30} />
                     </div>

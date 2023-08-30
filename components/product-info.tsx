@@ -15,7 +15,7 @@ const ProductInfo: React.FC<ProductInfoProps> = ({
             <p>
                 {data.description}
             </p>
-            <div className="w-full mt-8 flex justify-between items-start">
+            <div className="w-full flex-col gap-y-8 mt-8 flex justify-between items-start">
                 <div>
                     <h3 className="font-primary text-2xl">
                         CASE
