@@ -19,7 +19,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
     return (    
         <article className="text-primary font-primaryb items-center flex flex-col m-auto gap-y-2 cursor-pointer" onClick={handleClick}>
-            <div className="md:h-72 w-30">
+            <div className="md:h-72 2xl:h-96 w-30">
                 <img   
                     src={data?.images?.[0]?.url}
                     alt={`${data?.name} wristwatch image.`}
