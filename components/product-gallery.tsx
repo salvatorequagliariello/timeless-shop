@@ -29,7 +29,7 @@ const ProductGallery: React.FC<GalleryProps> = ({
     }, [])
 
     return (
-        <div className="h-[600px] max-w-[1500px] relative mx-auto">
+        <div className="w-full h-[600px] relative mx-auto">
                 <h1 className="absolute font-secondary text-9xl left-[50%] translate-x-[-50%] bottom-8">
                     {productName}
                 </h1>
@@ -39,11 +39,13 @@ const ProductGallery: React.FC<GalleryProps> = ({
                     >
                     <img key={images[currentIndex].id} src={images[currentIndex].url}  className="h-[600px]" />
                 </div>
-                <div className='absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-primary cursor-pointer z-20 hover:text-hov'>
-                    <ChevronLeft onClick={prevSlide} size={30} />
-                </div>
-                <div className='absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-primary cursor-pointer z-20 hover:text-hov'>
-                    <ChevronRight onClick={nextSlide} size={30} />
+                <div className="w-96 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex justify-between">
+                    <div className='text-primary cursor-pointer z-20 hover:text-hov'>
+                        <ChevronLeft onClick={prevSlide} size={30} />
+                    </div>
+                    <div className='text-primary cursor-pointer z-20 hover:text-hov'>
+                        <ChevronRight onClick={nextSlide} size={30} />
+                    </div>
                 </div>
         </div>
     );
