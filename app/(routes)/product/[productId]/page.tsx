@@ -1,6 +1,7 @@
 import getProduct from "@/actions/get-product";
 import getProducts from "@/actions/get-products";
 import ProductsList from "@/components/products-list";
+import ProductGallery from "@/components/product-gallery";
 
 interface ProductPageProps {
     params: {
@@ -19,7 +20,9 @@ const ProductPage: React.FC<ProductPageProps> = async ({
 
     return (
         <div className="pt-24 w-[85%] min-[1950px]:w-full mx-auto flex flex-col flex-wrap text-primary font-primaryb">
-            csw
+            <div>
+                <ProductGallery productName={product.name} images={product.images} />
+            </div>
             <ProductsList items={suggestedProducts}/>
         </div>
     );
