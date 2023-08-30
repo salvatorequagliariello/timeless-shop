@@ -23,11 +23,11 @@ const ProductCard: React.FC<ProductCardProps> = ({
                 <img   
                     src={data?.images?.[0]?.url}
                     alt={`${data?.name} wristwatch image.`}
-                    className= "h-56 md:h-full md:w-full object-contain"
+                    className= "h-48 md:h-full md:w-full object-contain"
                     />
             </div>
             <div className="text-center">
-                <h5 className="text-xl font-secondary">
+                <h5 className="text-md sm:text-xl font-secondary">
                     {data?.name}
                 </h5>
                 <div>
@@ -42,7 +42,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
                     </p>
                 </div>
             </div>
-                <button className="mt-4 w-max m-auto bg-primary text-secondary transition py-2 px-4 hover:bg-hov text-sm lg:text-md" onClick={handleClick}>
+                <button className="mt-1 md:mt-4 w-max m-auto bg-primary text-secondary transition py-1 px-2 sm:py-2 smpx-4 hover:bg-hov text-sm lg:text-md" onClick={handleClick}>
                     SHOP NOW
                 </button>
         </article>

@@ -47,9 +47,9 @@ const ProductPage: React.FC<ProductPageProps> = async ({
             </div>
 
             <div className="mt-16">
-                <h3 className="text-primary text-xl">Discover the collection</h3>
+                <h3 className="text-primary text-md md:text-xl">Discover the collection</h3>
                     <hr className="mt-2 bg-primary "/>
-                {/* <ProductsList items={suggestedProducts}/> */}
+                <ProductsList items={suggestedProducts}/>
             </div>
         </div>
     );
