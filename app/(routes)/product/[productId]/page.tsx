@@ -25,16 +25,16 @@ const ProductPage: React.FC<ProductPageProps> = async ({
         <div className="pt-24 w-[85%] min-[1950px]:w-full mx-auto flex flex-col flex-wrap gap-y-4 text-primary font-primaryb">
             <div>
                 <ProductGallery productName={product.name} images={product.images} />
-                <div className="flex flex-col md:flex-row items-center justify-between">
-                    <h2 className="font-primary text-2xl uppercase">
+                <div className="flex flex-col gap-y-2 md:flex-row items-center justify-between">
+                    <h2 className="font-primary text-xl lg:text-2xl uppercase">
                         {product.name}
                     </h2>
-                    <button className="bg-primary text-secondary transition py-4 px-4 hover:bg-hov text-sm group lg:text-md cursor-pointer">
-                        <Link href="/" className="flex gap-x-4 items-center">
+                    <button className="bg-primary text-secondary transition py-2 px-2 md:py-4 md:px-4 hover:bg-hov text-sm group lg:text-md cursor-pointer">
+                        <Link href="/" className="flex md:gap-x-4 gap-x-2 items-center">
                             <p className="cursor-pointer">
                                 <Currency value={product.price} />
                             </p>
-                            <p className="w-full border-l border-secondary pl-4">
+                            <p className="w-full border-l border-secondary pl-2 md:pl-4">
                                 Add to cart
                             </p>
                         </Link>
