@@ -4,6 +4,7 @@ import ProductsList from "@/components/products-list";
 import ProductGallery from "@/components/product-gallery";
 import Link from "next/link";
 import Currency from "@/components/ui/currency";
+import ProductInfo from "@/components/product-info";
 
 interface ProductPageProps {
     params: {
@@ -25,12 +26,14 @@ const ProductPage: React.FC<ProductPageProps> = async ({
             <div>
                 <ProductGallery productName={product.name} images={product.images} />
                 <div className="flex items-center justify-between">
-                    <h2 className="font-primary text-2xl uppercase">
+                    <h2 className="font-primary text-3xl uppercase">
                         {product.name}
                     </h2>
-                    <button className="bg-primary text-secondary transition py-4 px-8 hover:bg-hov text-sm group lg:text-md cursor-pointer">
-                        <Link href="/" className="flex gap-x-4">
-                            <Currency value={product.price} />
+                    <button className="bg-primary text-secondary transition py-4 px-4 hover:bg-hov text-sm group lg:text-md cursor-pointer">
+                        <Link href="/" className="flex gap-x-4 items-center">
+                            <p className="cursor-pointer">
+                                <Currency value={product.price} />
+                            </p>
                             <p className="w-full border-l border-secondary pl-4">
                                 Add to cart
                             </p>
@@ -39,6 +42,10 @@ const ProductPage: React.FC<ProductPageProps> = async ({
                 </div>
             </div>
             <hr / >
+            <div>
+                <ProductInfo data={product} />
+            </div>
+
             <div>
                 <h3 className="text-primary text-xl">Discover the collection</h3>
                     <hr className="mt-2 bg-primary "/>

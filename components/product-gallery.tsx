@@ -30,12 +30,12 @@ const ProductGallery: React.FC<GalleryProps> = ({
 
     return (
         <div className="w-full h-[600px] relative mx-auto">
-                <h1 className="absolute font-secondary text-9xl left-[50%] translate-x-[-50%] bottom-8">
+                <h1 className="absolute font-secondary text-8xl left-[50%] translate-x-[-50%] bottom-8">
                     {productName}
                 </h1>
                 <div
                     key={currentIndex}
-                    className='w-auto mx-auto flex place-content-center rotate-[30deg] animate-fadeIn'
+                    className='w-auto mx-auto flex place-content-center animate-fadeIn'
                     >
                     <img key={images[currentIndex].id} src={images[currentIndex].url}  className="h-[600px]" />
                 </div>
