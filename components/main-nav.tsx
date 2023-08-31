@@ -3,15 +3,17 @@ import { useState } from "react";
 import Link from "next/link";
 import { ChevronLeft, Menu, X } from "lucide-react";
 import CategoriesNav from "./categories-nav";
-import { Category } from "@/types";
+import { Billboard, Category } from "@/types";
 
 interface MainNavProps {
     data: Category[];
+    billboards: Billboard[];
 }
 
 
 const MainNav: React.FC<MainNavProps> = ({
-    data
+    data,
+    billboards
 }) => {    
     const [isNavOpen, setIsNavOpen] = useState(false);
     const [isCategoriesOpen, setIsCategoriesOpen] = useState(false);
@@ -75,7 +77,7 @@ const MainNav: React.FC<MainNavProps> = ({
                             </button>
                         </div>
                         <div>
-                            <CategoriesNav data={data}/>
+                            <CategoriesNav data={data} billboards={billboards}/>
                         </div>           
                     </div>
                 </div>
