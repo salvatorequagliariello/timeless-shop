@@ -29,7 +29,7 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
     const category = await getCategory(params.categoryId);
 
     return (
-        <div className="min-[1950px]:w-full max-w-[1980px] pt-24 mx-auto flex flex-col flex-wrap gap-y-4 text-primary font-primaryb">
+        <div className="min-[1950px]:w-full max-w-[1920px] pt-24 mx-auto flex flex-col flex-wrap gap-y-4 text-primary font-primaryb">
             <div className="flex overflow-hidden">
                 <h1 className="-bottom-4 left-0 font-secondary text-9xl place-self-end">
                     {category.name} Collection

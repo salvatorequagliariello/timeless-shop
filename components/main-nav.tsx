@@ -59,9 +59,9 @@ const MainNav: React.FC<MainNavProps> = ({
 
             {/* CATEGORIES MENU */}
             <div>
-                <div className={isCategoriesOpen ? "showMenuNav bg-secondary" : "hideMenuNav bg-secondary"}>
-                    <div className="flex flex-col p-8">
-                        <div className="w-full flex justify-between items-center">
+                <div className={isCategoriesOpen ? "showMenuCat bg-secondary h-[400px]" : "hideMenuNav bg-secondary"}>
+                    <div className="flex flex-col p-8 bg-secondary">
+                        <div className="flex justify-between items-center">
                             <button 
                                 onClick={() => setIsCategoriesOpen(false)}
                                 className="p-2 border rounded-full border-primary max-w-max hover:border-hov ">
@@ -76,7 +76,7 @@ const MainNav: React.FC<MainNavProps> = ({
                                     <X className="h-5 w-5 hover:stroke-hov cursor-pointer"/>
                             </button>
                         </div>
-                        <div>
+                        <div className="h-full">
                             <CategoriesNav data={data} billboards={billboards}/>
                         </div>           
                     </div>
@@ -93,6 +93,14 @@ const MainNav: React.FC<MainNavProps> = ({
                             position: absolute;
                             width: 100%;
                             height: 100vh;
+                            top: 0;
+                            left: 0;
+                            z-index: 90;
+                        }
+                        .showMenuCat {
+                            display: block;
+                            position: absolute;
+                            width: 100%;
                             top: 0;
                             left: 0;
                             z-index: 90;
