@@ -100,8 +100,12 @@ const MainNav: React.FC<MainNavProps> = ({
                                     <Link
                                         key="allwatches"
                                         href="/"
-                                        className="relative w-76 h-36 bg-primary rounded-xl">
-                                            <video src="" />
+                                        className="w-76 h-36 text-primary relative group hover:outline-2 outline-slate-800"
+                                        onClick={() => {
+                                            setIsCategoriesOpen(false);
+                                            setIsNavOpen(false);
+                                        }}>
+                                            <img src="./assets/images/all-watches-pic.webp" className="w-full h-full rounded-xl group-hover:shadow-lg shadow-primary object-cover" />
                                             <p className="absolute left-2 bottom-2 text-slate-100">
                                                 All watches
                                             </p>
@@ -110,7 +114,11 @@ const MainNav: React.FC<MainNavProps> = ({
                                         <Link
                                             key={route.href}
                                             href={route.href}
-                                            className="w-76 h-36 text-primary relative group hover:outline-2 outline-slate-800">
+                                            className="w-76 h-36 text-primary relative group hover:outline-2 outline-slate-800"
+                                            onClick={() => {
+                                                setIsCategoriesOpen(false);
+                                                setIsNavOpen(false);
+                                            }}>
                                             <div className="absolute w-full h-full bg-gradient-to-t from-gray-700 to-transparent opacity-70 rounded-xl"></div>
                                                 <p className="absolute left-2 bottom-2 text-slate-100">
                                                     {route.label}
