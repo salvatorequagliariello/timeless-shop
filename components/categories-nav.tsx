@@ -22,11 +22,11 @@ const CategoriesNav: React.FC<CategoriesNavProps> = ({
     }));
 
     return (
-        <div className="w-max text-primary font-primaryb mt-8 bg-secondary mx-auto lg:h-[400px]">
+        <div className="w-max text-primary font-primaryb mt-8 bg-secondary mx-auto min-[1145px]:h-[400px] overflow-y-auto">
             <h2 className="text-xl">
                 Watches
             </h2>
-            <nav className="w-max mx-auto grid grid-cols-4 place-content-center gap-4 mt-4">
+            <nav className="w-max mx-auto grid min-[591px]:grid-cols-2 min-[857px]:grid-cols-3 min-[1145px]:grid-cols-4 place-content-center gap-4 mt-4">
                 <Link
                     key="allwatches"
                     href="/"
