@@ -37,7 +37,7 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
                 </div>
                 <hr className="my-4"/>
                 <div>
-                    <ProductsList items={products} />
+                    <ProductsList items={products} three={true}/>
                 </div>
             </div>
         </div>

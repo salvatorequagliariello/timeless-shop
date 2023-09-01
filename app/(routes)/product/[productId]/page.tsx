@@ -49,7 +49,7 @@ const ProductPage: React.FC<ProductPageProps> = async ({
                 <h3 className="text-primary text-md md:text-xl">Discover the collection</h3>
                     <hr className="mt-2 bg-primary "/>
                 <div className="mx-auto">
-                    <ProductsList items={suggestedProducts} className="grid-cols-3"/>
+                    <ProductsList items={suggestedProducts} three={true}/>
                 </div>
             </div>
         </div>

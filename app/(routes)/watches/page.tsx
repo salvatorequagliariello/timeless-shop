@@ -1,4 +1,3 @@
-import getCategory from "@/actions/get-category";
 import getProducts from "@/actions/get-products";
 import Filter from "@/components/filter";
 import CategoryDescription from "@/components/category-description";
@@ -7,7 +6,6 @@ import ProductsList from "@/components/products-list";
 import getMovements from "@/actions/get-movements";
 import getBracelets from "@/actions/get-bracelets";
 import getCategories from "@/actions/get-categories";
-import NoResults from "@/components/no-results";
 
 export const revalidate = 0;
 
