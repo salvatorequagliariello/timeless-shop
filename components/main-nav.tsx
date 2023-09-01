@@ -99,7 +99,7 @@ const MainNav: React.FC<MainNavProps> = ({
                                 <nav className="mx-auto grid min-[591px]:grid-cols-2 min-[857px]:grid-cols-3 min-[1145px]:grid-cols-4 place-content-center gap-4 mt-4">
                                     <Link
                                         key="allwatches"
-                                        href="/"
+                                        href="/watches"
                                         className="w-76 h-36 text-primary relative group hover:outline-2 outline-slate-800"
                                         onClick={() => {
                                             setIsCategoriesOpen(false);
