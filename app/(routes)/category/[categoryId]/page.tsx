@@ -1,34 +1,21 @@
 import getCategory from "@/actions/get-category";
 import getProducts from "@/actions/get-products";
-import Filter from "@/components/filter";
 import CategoryDescription from "@/components/category-description";
-import getCases from "@/actions/get-cases";
+import ProductsList from "@/components/products-list";
 
 export const revalidate = 0;
 
 interface CategoryPageProps {
     params: {
         categoryId: string;
-    },
-    searchParams: {
-        caseId: string;
-        braceletId: string;
-        movementId: string;
     }
 }
 
 const CategoryPage: React.FC<CategoryPageProps> = async ({
     params,
-    searchParams
 }) => {
-    const products = await getProducts({ 
-        categoryId: params.categoryId,
-        caseId: searchParams.caseId,
-        braceletId: searchParams.braceletId,
-        movementId: searchParams.movementId
-    });
+    const products = await getProducts({ categoryId: params.categoryId });
 
-    const cases = await getCases();
     const category = await getCategory(params.categoryId);
 
     return (
@@ -50,7 +37,7 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
                 </div>
                 <hr className="my-4"/>
                 <div>
-                    <Filter valueKey="caseId" name="Case Material" data={cases} />
+                    <ProductsList items={products} />
                 </div>
             </div>
         </div>

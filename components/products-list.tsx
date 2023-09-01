@@ -13,7 +13,7 @@ const ProductsList: React.FC<ProductsListProps> = ({
         <div>
             <div>
                 {items.length === 0 && <NoResults />}
-                <div className="flex flex-col sm:flex-row flex-wrap justify-center xl:w-[70%] m-auto mt-4">
+                <div className="flex flex-col sm:flex-row justify-center xl:w-[70%] h-auto mx-auto mt-4">
                     {items.map((item) => (
                         <ProductCard key={item.id} data={item} />
                         ))}
