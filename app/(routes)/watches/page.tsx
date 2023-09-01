@@ -56,15 +56,15 @@ const AllWatchesPage: React.FC<AllWatchesPageProps> = async ({
                     <CategoryDescription category={"All watches"} />
                 </div>
                 <hr className="mt-8"/>
-                <div className="flex justify-between my-4">
+                <div className="flex flex-col gap-y-8 text-center justify-center xl:flex-row xl:justify-between my-4">
                     <h2>
                         FILTER YOUR SEARCH
                     </h2>
-                    <div className="w-max flex ml-auto gap-x-16">
-                        <Filter valueKey="categoryId" name="Collections" data={categories} />
-                        <Filter valueKey="caseId" name="Case Material" data={cases} />
-                        <Filter valueKey="movementId" name="Movement" data={movements} />
-                        <Filter valueKey="braceletId" name="Bracelet Material" data={bracelets} />
+                    <div className="flex flex-col gap-y-4 place-content-center md:justify-between md:w-full xl:w-auto max-lg:mx-auto md:flex-row xl:ml-auto xl:gap-x-16">
+                        <Filter key="categoryId" valueKey="categoryId" name="Collections" data={categories} />
+                        <Filter key="caseId" valueKey="caseId" name="Case Material" data={cases} />
+                        <Filter key="movementId" valueKey="movementId" name="Movement" data={movements} />
+                        <Filter key="braceletId" valueKey="braceletId" name="Bracelet Material" data={bracelets} />
                     </div>
                 </div>
                 <hr />

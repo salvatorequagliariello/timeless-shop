@@ -59,7 +59,7 @@ const Filter: React.FC<FilterProps> = ({
                 {open ? (
                     <div className="mt-2 flex flex-col gap-y-2">
                         {data.map(filter => (
-                            <div className="flex justify-between">
+                            <div className="flex justify-between" key={filter.id}>
                                 <button 
                                 className={cn("border-2 border-primary w-6", selectedValue === filter.id && "bg-primary")}
                                 onClick={() => {onClick(filter.id)}}
