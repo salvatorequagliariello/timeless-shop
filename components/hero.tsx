@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
       }, [currentIndex]);
 
     return (
-            <div className="flex items-center justify-center mx-auto animate-fadeInDown">
+            <div className="flex items-center justify-center mx-auto animate-fade-down animate-once animate-ease-out">
                 <div className="relative">
                     <div className="relative">
                         {<video
@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
                             autoPlay 
                             loop 
                             className="w-full h-[450px] rounded-b-[15%] min-[500px]:h-[500px] min-[500px]:rounded-b-[300px] md:rounded-b-[400px]
-                            lg:rounded-b-[400px] lg:w-[1024px] xl:h-[600px] xl:rounded-b-full xl:w-full min-[1470px]:h-[620px] min-[1600px]:h-[700px] min-[1900px]:h-[850px] object-cover animate-fadeIn animate-slower">
+                            lg:rounded-b-[400px] lg:w-[1024px] xl:h-[600px] xl:rounded-b-full xl:w-full min-[1470px]:h-[620px] min-[1600px]:h-[700px] min-[1900px]:h-[850px] object-cover animate-fade animate-easy-out">
                                 <source src={slides[currentIndex].image} type="video/webm" aria-label="Watch ticking video" />
                         </video>}
                         <div className="w-min absolute m-auto bottom-8 left-0 right-0 flex gap-x-1">
@@ -67,7 +67,7 @@ const Hero: React.FC = () => {
                     </div>
                     <div 
                         key={currentIndex} 
-                        className="flex flex-col gap-y-2 my-4 mx-auto items-center place-content-center lg:w-32 lg:absolute lg:bottom-4  lg:left-4 text-primary animate-fadeInLeft">
+                        className="flex flex-col gap-y-2 my-4 mx-auto items-center place-content-center lg:w-32 lg:absolute lg:bottom-4  lg:left-4 text-primary animate-fade-right animate-easy-out">
                         <h1 className="font-semibold min text-4xl lg:text-6xl xl:text-7xl font-secondary mx-auto text-center lg:text-start">
                             {slides[currentIndex].bannertext}
                         </h1>
