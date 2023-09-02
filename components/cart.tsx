@@ -25,7 +25,7 @@ const Cart: React.FC<CartProps> = ({
         <Link href="/cart" className="relative flex items-end gap-x-1">
                 <ShoppingBag size={20} className={cn(className ? className : "stroke-primary hover:stroke-hov cursor-pointer")} />
                 <span 
-                className={cn("-top-2 -right-[7px] text-[12px] text-slate-50 bg-blue-800 font-primary px-1 py-[0.5px]", 
+                className={cn("-top-2 -right-[6px] text-[12px] font-primary text-primary ", 
                 cart.items.length >= 1 ? "absolute" : "hidden")}>
                     {cart.items.length}
                 </span>
