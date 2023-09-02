@@ -5,7 +5,6 @@ import MainNav from "@/components/main-nav";
 import getCategories from "@/actions/get-categories";
 import Cart from "@/components/cart";
 import getBillboards from "@/actions/get-billboards";
-import useCart from "@/hooks/use-cart";
 
 export const revalidate = 0;
 

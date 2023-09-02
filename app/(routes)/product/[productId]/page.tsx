@@ -23,7 +23,7 @@ const ProductPage: React.FC<ProductPageProps> = async ({
 
 
     return (
-        <div className="pt-24 w-[85%] min-[1950px]:w-full max-w-[1920px] mx-auto flex flex-col flex-wrap gap-y-4 text-primary font-primaryb">
+        <div className="pt-24 w-[85%] min-[1920px]:w-full max-w-[1920px] mx-auto flex flex-col flex-wrap gap-y-4 text-primary font-primaryb">
             <div>
                 <ProductGallery productName={product.name} images={product.images} />
                 <div className="flex flex-col gap-y-2 md:flex-row items-center justify-between">
