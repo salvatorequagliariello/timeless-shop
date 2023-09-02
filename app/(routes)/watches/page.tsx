@@ -41,7 +41,7 @@ const AllWatchesPage: React.FC<AllWatchesPageProps> = async ({
 
     return (
         <div className="max-w-[1920px] pt-24 mx-auto flex flex-col gap-y-4 text-primary font-primaryb">
-            <CategoryHeader imgUrl="./assets/images/all-watches-pic.webp" categoryName="All Watches" />
+            <CategoryHeader imgUrl="./assets/images/all-watches-hero-img.webp" categoryName="All Watches" />
             <div className="w-[85%] min-[1921px]:w-full mx-auto mt-4">
                 <hr />
                 <div className="flex flex-col gap-y-8 text-center justify-center xl:flex-row xl:justify-between my-4">
