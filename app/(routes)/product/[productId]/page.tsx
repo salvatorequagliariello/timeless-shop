@@ -22,7 +22,7 @@ const ProductPage: React.FC<ProductPageProps> = async ({
 
 
     return (
-        <div className="pt-24 w-[85%] min-[1950px]:w-full mx-auto flex flex-col flex-wrap gap-y-4 text-primary font-primaryb">
+        <div className="pt-24 w-[85%] min-[1950px]:w-full max-w-[1920px] mx-auto flex flex-col flex-wrap gap-y-4 text-primary font-primaryb">
             <div>
                 <ProductGallery productName={product.name} images={product.images} />
                 <div className="flex flex-col gap-y-2 md:flex-row items-center justify-between">
@@ -45,11 +45,12 @@ const ProductPage: React.FC<ProductPageProps> = async ({
             <div>
                 <ProductInfo data={product} />
             </div>
-
             <div className="mt-16">
                 <h3 className="text-primary text-md md:text-xl">Discover the collection</h3>
                     <hr className="mt-2 bg-primary "/>
-                <ProductsList items={suggestedProducts}/>
+                <div className="mx-auto">
+                    <ProductsList items={suggestedProducts} three={true}/>
+                </div>
             </div>
         </div>
     );
