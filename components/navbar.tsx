@@ -1,4 +1,3 @@
-import Container from "@/components/ui/container";
 import Image from "next/image";
 import timelessLogo from "@/public/assets/images/timeless-logo.png";
 import Link from "next/link";
@@ -6,13 +5,13 @@ import MainNav from "@/components/main-nav";
 import getCategories from "@/actions/get-categories";
 import Cart from "@/components/cart";
 import getBillboards from "@/actions/get-billboards";
+import useCart from "@/hooks/use-cart";
 
 export const revalidate = 0;
 
 const Navbar = async () => {
     const categories = await getCategories();
     const billboards = await getBillboards();
-    const cartItems = 0;
 
     return (
             <div className="fixed w-full bg-secondary py-4 md:py-7 text-primary z-40">

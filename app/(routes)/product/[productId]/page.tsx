@@ -5,6 +5,7 @@ import ProductGallery from "@/components/product-gallery";
 import Link from "next/link";
 import Currency from "@/components/ui/currency";
 import ProductInfo from "@/components/product-info";
+import AddToCartButton from "@/components/cart-button";
 
 interface ProductPageProps {
     params: {
@@ -29,16 +30,7 @@ const ProductPage: React.FC<ProductPageProps> = async ({
                     <h2 className="font-primary text-xl lg:text-2xl uppercase">
                         {product.name}
                     </h2>
-                    <button className="bg-primary text-secondary transition py-2 px-2 md:py-4 md:px-4 hover:bg-hov text-sm group lg:text-md cursor-pointer">
-                        <Link href="/" className="flex md:gap-x-4 gap-x-2 items-center">
-                            <p className="cursor-pointer">
-                                <Currency value={product.price} />
-                            </p>
-                            <p className="w-full border-l border-secondary pl-2 md:pl-4">
-                                Add to cart
-                            </p>
-                        </Link>
-                    </button>
+                    <AddToCartButton productPrice={product.price} product={product} />
                 </div>
             </div>
             <hr / >

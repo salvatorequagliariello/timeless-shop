@@ -3,16 +3,16 @@
 import { ShoppingBag } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { useState, useEffect } from "react";
-
+import useCart from "@/hooks/use-cart";
 interface CartProps {
     className?: string
 }
 
 const Cart: React.FC<CartProps> = ({
-    className
+    className,
 }) => {
-    const cartItems = 0;
     const [isMounted, setIsMounted] = useState(false);
+    const cart = useCart();
 
     useEffect(() => {
         setIsMounted(true);
@@ -25,8 +25,8 @@ const Cart: React.FC<CartProps> = ({
                 <ShoppingBag size={20} className={cn(className ? className : "stroke-primary hover:stroke-hov cursor-pointer")} />
                 <span 
                 className={cn("-top-2 -right-[7px] text-[12px] text-slate-50 bg-blue-800 font-primary px-1 py-[0.5px]", 
-                cartItems >= 1 ? "absolute" : "hidden")}>
-                    {cartItems}
+                cart.items.length >= 1 ? "absolute" : "hidden")}>
+                    {cart.items.length}
                 </span>
         </button>
     );
