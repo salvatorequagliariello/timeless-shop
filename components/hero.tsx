@@ -1,22 +1,24 @@
 "use client";
 
-import { Dot, Sliders } from "lucide-react";
-import Container from "./ui/container";
+import { Dot } from "lucide-react";
 import { useState, useEffect } from "react";
-import next from "next";
+import Link from "next/link";
 
 const slides = [
     {
         image: "./assets/videos/clock-close-up.webm",
-        bannertext: "Prestige Collection"
+        bannertext: "All Watches",
+        link: "/watches"
     },
     {
         image: "./assets/videos/hand-watch.webm",
-        bannertext: "Seawatcher Collection"
+        bannertext: "Seawatcher Collection",
+        link: "/category/5dc667f0-dff3-4b23-9a71-3d0b27c1c0b0"
     },
     {
         image: "./assets/videos/woman-wristwatch-close-up.webm",
-        bannertext: "For Her"
+        bannertext: "For Her",
+        link: "/category/0eec49da-7a59-4082-8ae7-81efcef3b07b"
     }
 ];
 
@@ -69,9 +71,11 @@ const Hero: React.FC = () => {
                         <h1 className="font-semibold min text-4xl lg:text-6xl xl:text-7xl font-secondary mx-auto text-center lg:text-start">
                             {slides[currentIndex].bannertext}
                         </h1>
-                        <button className="font-primaryb lg:text-md xl:text-xl text-secondary bg-primary py-2 px-8 hover:bg-hov transition text-center place-self-center">
-                            Discover
-                        </button>
+                        <Link  href={slides[currentIndex].link}>
+                            <button className="font-primaryb lg:text-md xl:text-xl text-secondary bg-primary py-2 px-8 hover:bg-hov transition text-center place-self-center">
+                                Discover
+                            </button>
+                        </Link>
                     </div>      
                 </div>
             </div>
