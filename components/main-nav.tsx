@@ -38,8 +38,8 @@ const MainNav: React.FC<MainNavProps> = ({
                 <button onClick={() => setIsCategoriesOpen(true)} className="hover:text-hov cursor-pointer">
                     Watches
                 </button>
-                <Link href="/" className="hover:text-hov cursor-pointer">
-                    About
+                <Link href="/about" className="hover:text-hov cursor-pointer">
+                    Our Maison
                 </Link>
             </div>
 
@@ -62,8 +62,8 @@ const MainNav: React.FC<MainNavProps> = ({
                                 <button onClick={() => setIsCategoriesOpen(true)} className="text-left hover:text-hov cursor-pointer">
                                     Watches
                                 </button>
-                                <Link href="/" className="text-left hover:text-hov cursor-pointer">
-                                    About
+                                <Link onClick={() => setIsNavOpen(false)} href="/about" className="text-left hover:text-hov cursor-pointer">
+                                    Our Maison
                                 </Link>
                             </ul>
                         </div>

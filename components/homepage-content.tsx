@@ -8,7 +8,7 @@ const HomePageContent = async () => {
     const featuredProducts =  await getProducts({ isFeatured: true });
 
     return (
-        <div className="mt-32 w-[85%] min-[1921px]:w-full mx-auto flex flex-col gap-y-16 flex-wrap text-primary break-words">
+        <div className="mt-24 lg:mt-32 w-[85%] min-[1921px]:w-full mx-auto flex flex-col gap-y-16 flex-wrap text-primary break-words">
             <div className="relative">
                 <img src={"./assets/images/homepage-content/moonwalker-banner.webp"} alt="A watch" className="h-[300px] lg:h-[400px] w-full object-cover"/>
                 <div className="absolute bottom-8 left-4 flex flex-col gap-y-4">

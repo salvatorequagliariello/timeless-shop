@@ -55,7 +55,7 @@ const CartItem: React.FC<CartItemProps> = ({
             <div className="border-2 border-primary p-2 text-primary flex flex-col min-[501px]:hidden">
                 <X onClick={onRemove} className="w-5 hover:text-hov cursor-pointer self-end" />
                 <hr />
-                <div className="flex justify-between min-[320px]:justify-center gap-x-4 mt-2">
+                <div className="flex justify-between min-[375px]:justify-center gap-x-8 mt-2">
                     <div className="px-6 py-2 bg-secondary border-2 border-primary items-center">
                         <img src={data.images[0].url} className="w-16 h-18 self-center"/>
                     </div>
