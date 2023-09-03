@@ -1,4 +1,3 @@
-import Container from "@/components/ui/container";
 import Image from "next/image";
 import timelessLogo from "@/public/assets/images/timeless-logo.png";
 import Link from "next/link";
@@ -12,11 +11,10 @@ export const revalidate = 0;
 const Navbar = async () => {
     const categories = await getCategories();
     const billboards = await getBillboards();
-    const cartItems = 0;
 
     return (
             <div className="fixed w-full bg-secondary py-4 md:py-7 text-primary z-40">
-                    <div className="flex max-w-[1920px] items-center mx-auto px-4 md:px-10 justify-between animate-fadeInUp w-full">
+                    <div className="flex max-w-[1920px] items-center mx-auto px-4 md:px-10 justify-between animate-fade-up animate-once animate-ease-out w-full">
                         <Link href="/" className="w-max xl:ml-24 min-[1470px]:ml-36 min-[1600px]:ml-48 min-[1900px]:ml-40">
                             <Image src={timelessLogo} width={170} alt="Timeless Company Logo" className="dark:filter dark:invert dark:grayscale"/>
                         </Link>

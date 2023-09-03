@@ -12,12 +12,12 @@ const CategoryHeader: React.FC<CategoryHeaderProps> = ({
     return (
         <div className="max-w-[1920px]">
             <div className="w-full flex flex-col md:flex-row gap-y-4">
-                <div className="w-full md:w-2/5 md:place-self-end z-10">
+                <div className="w-full md:w-2/5 md:place-self-end z-10 animate-fade-right animate-once animate-ease-in animate-duration-500">
                     <h1 className="font-secondary text-4xl md:text-5xl lg:text-6xl xl:text-8xl h-full w-full">
                         {categoryName}
                     </h1>
                 </div>
-                <div className="max-md:w-[90%] self-end h-[200px] min-[425px]:h-[250px] min-[600px]:h-[300px] lg:h-[400px] md:w-3/5 xl:h-full">
+                <div className="max-md:w-[90%] self-end h-[200px] min-[425px]:h-[250px] min-[600px]:h-[300px] lg:h-[400px] md:w-3/5 xl:h-full animate-fade-left animate-once animate-ease-in animate-duration-500">
                     <img src={imgUrl} className="w-full h-full rounded-l-full object-cover self-end xl:self-center" />
                 </div>
             </div>
