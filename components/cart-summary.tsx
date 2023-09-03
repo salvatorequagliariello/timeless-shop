@@ -16,8 +16,6 @@ const CartSummary = () => {
     const itemsPrice = items.reduce((total, item) => {
         return total + Number(item.price)
     }, 0);
-    const vat = (itemsPrice / 100 * 20);
-    const totalPrice = vat +  itemsPrice;
 
     useEffect(() => {
         if (searcParams.get("success")) {
@@ -61,20 +59,12 @@ const CartSummary = () => {
                             Free
                         </p>
                     </div>
-                    <div className="flex justify-between opacity-80">
-                        <p>
-                            VAT
-                        </p>
-                        <p>
-                            <Currency value={vat} />
-                        </p>
-                    </div>
                     <div className="flex justify-between font-primary">
                         <p>
                             Total
                         </p>
                         <p>
-                            <Currency value={totalPrice} />
+                            <Currency value={itemsPrice} />
                         </p>
                     </div>
                 </div>
