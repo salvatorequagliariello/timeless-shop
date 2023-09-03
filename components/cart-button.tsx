@@ -27,14 +27,14 @@ const AddToCartButton: React.FC<AddToCartButtonProps> = ({
         className="bg-primary text-secondary transition py-2 px-2 md:py-4 md:px-4 hover:bg-hov text-sm group lg:text-md cursor-pointer"
         onClick={onAddToCart}
         >
-            <Link href="/" className="flex md:gap-x-4 gap-x-2 items-center">
+            <div className="flex md:gap-x-4 gap-x-2 items-center">
                 <p className="cursor-pointer">
                     <Currency value={productPrice} />
                 </p>
                 <p className="w-full border-l border-secondary pl-2 md:pl-4">
                     Add to cart
                 </p>
-            </Link>
+            </div>
         </button>
     );
 };

@@ -22,7 +22,7 @@ const Footer = () => {
                         </li>
                         <li className="hover:text-hov">
                             <Link href="/cart">
-                                My basket
+                                My cart
                             </Link>
                         </li>
                     </ul>
