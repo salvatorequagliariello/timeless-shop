@@ -19,6 +19,25 @@ const CartSummary = () => {
     const vat = (itemsPrice / 100 * 20);
     const totalPrice = vat +  itemsPrice;
 
+    useEffect(() => {
+        if (searcParams.get("success")) {
+            toast.success("Payment completed.");
+            removeAll();
+        };
+
+        if (searcParams.get("canceled")) {
+            toast.error("Something went wrong.");
+        }
+    }, [searcParams, removeAll]);
+
+    const onCheckout = async () => {
+        const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/checkout`, {
+            productIds: items.map((item) => item.id),
+        });
+
+        window.location =  response.data.url;
+    }
+
     return (
         <div className="w-full flex flex-col border-2 border-primary text-primary p-6 gap-y-6">
             <div>
@@ -60,7 +79,7 @@ const CartSummary = () => {
                     </div>
                 </div>
             </div>
-            <button className="w-full font-primaryb text-xl text-secondary bg-primary py-2 hover:bg-hov text-center place-self-center">
+            <button onClick={onCheckout} className="w-full font-primaryb text-xl text-secondary bg-primary py-2 hover:bg-hov text-center place-self-center">
                 Checkout
             </button>
             <div className="mt-4">
