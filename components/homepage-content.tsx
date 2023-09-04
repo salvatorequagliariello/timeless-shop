@@ -50,9 +50,8 @@ const HomePageContent = async () => {
                     autoPlay
                     playsInline
                     loop 
-                    className="h-[350px] lg:h-[450px] w-full object-cover animate-fadeIn animate-slower"
-                    src="./assets/images/homepage-content/rolling-watches.webm">
-                        <source src="./assets/images/homepage-content/rolling-watches.webm" type="video/webm" aria-label="Some watches" />
+                    className="h-[350px] lg:h-[450px] w-full object-cover animate-fadeIn animate-slower">
+                        <source src="./assets/images/homepage-content/rolling-watches.mp4" type="video/mp4" aria-label="Some watches" />
                 </video>
                 <h2 className="absolute bottom-8 left-4 font-secondary text-slate-50 text-4xl lg:text-6xl px-2">Beautifully crafted Timepieces.</h2>
             </div>
