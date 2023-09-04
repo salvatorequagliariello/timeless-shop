@@ -47,7 +47,8 @@ const HomePageContent = async () => {
             <div className="relative">
                 <video
                     muted 
-                    autoPlay 
+                    autoPlay
+                    playsInline  
                     loop 
                     className="h-[350px] lg:h-[450px] w-full object-cover animate-fadeIn animate-slower">
                         <source src="./assets/images/homepage-content/rolling-watches.webm" type="video/webm" aria-label="Some watches" />
