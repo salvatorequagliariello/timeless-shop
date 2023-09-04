@@ -21,12 +21,12 @@ const paragraphs = [
 
 const AboutPage = () => {
     return (
-        <div className="pt-24 w-[85%] min-[1920px]:w-full max-w-[1920px] mx-auto flex flex-col flex-wrap gap-y-4 text-primary font-primaryb">
+        <div className="pt-24 w-[85%] min-[2100px]:w-full max-w-[1920px] mx-auto flex flex-col flex-wrap gap-y-4 text-primary font-primaryb">
             <div className="max-w-[1520px] h-[400px] md:h-[450px] lg:h-[700px] flex flex-col mx-auto pt-16 text-center rounded-b-full w-full object-cover animate-fade-down animate-easy-out bg-cover bg-no-repeat bg-center brightness-90" style={{backgroundImage: "url(./assets/about/maison-watchmakers.webp)"}}>
                 <h1 className="font-secondary text-5xl md:text-6xl lg:text-8xl brightness-100 text-zinc-800 max-[319px]break-all break-word drop-shadow-xl">
                     A Timeless vision.
                 </h1>
-                <p className="lg:w-[400px] mx-auto drop-shadow-xl max-lg:hidden">
+                <p className="lg:w-[400px] mx-auto drop-shadow-xl max-lg:hidden text-zinc-800">
                     Since 1839, Timeless has embodied avant-garde, precision and bold style, that have marked the world history of the watch industry. We invite you to explore our legacy, through our timepieces and innovations.
                 </p>
             </div>

@@ -46,7 +46,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <hr />
-                <div className="pt-4 flex flex-col sm:flex-row justify-between gap-y-4">
+                <div className="pt-4 flex flex-col sm:flex-row justify-between gap-y-4 sm:px-8">
                     <p className="text-sm font-light text-center">
                         &copy; {new Date().getFullYear()} Timeless Watch Co., All rights reserved.
                     </p>
