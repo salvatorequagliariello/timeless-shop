@@ -13,7 +13,6 @@ An E-commerce web-app built with React and NextJS and wrote in TypeScript for a 
 ## Table of Contents  
 -  [Tech Stack](https://github.com/salvatorequagliariello/timeless-shop/blob/main/README.md#tech-stack)
 -  [Overview](https://github.com/salvatorequagliariello/timeless-shop/blob/main/README.md#overview)
--  [Features](https://github.com/salvatorequagliariello/timeless-shop/blob/main/README.md#features)
 -  [Screenshots](https://github.com/salvatorequagliariello/timeless-shop/blob/main/README.md#screenshots)
 
 <br>
@@ -37,16 +36,12 @@ The styling of the site is based on TailwindCSS, and in addition to being fully 
 
 Once on the e-commerce it is possible to browse through the different collections or filter search results by material, strap material, or movement type.
 
-It is then possible to click on a specific timepiece to see its history and features in more detail, admire its shape, or simply to purchase it. The E-commerce shopping cart allows customers to "buy" the watches they choose, thanks to the integration with Stripe, which will fully simulate the purchase phase. 
+It is then possible to click on a specific timepiece to see its history and features in more detail, admire its case, or simply to purchase it. The E-commerce shopping cart allows customers to "buy" the watches they choose, thanks to the integration with Stripe, which will fully simulate the purchase phase. 
 
 <br>
 
-## Features
-- Manage multiple stores with a single account
-- Fully responsive
-- Stripe integration for payments reports and details
-- Light/Dark mode
-- Serverless database
-- Easy to scale or refactor
+## Screenshots
+
+
 
 <br>
