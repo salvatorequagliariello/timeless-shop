@@ -1,34 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+  <img src="https://github.com/salvatorequagliariello/timeless-shop/assets/109867120/22591bad-c042-4436-8539-25ceae84b39c">
+</div>
+<h1 align="center">
+  TIMELESS E-commerce ⌚
+</h1>
 
-## Getting Started
+An E-commerce web-app built with React and NextJS and wrote in TypeScript for a fictional premium watches maison called TIMELESS. The e-shop is fully managed by my [CMS](https://github.com/salvatorequagliariello/ecommerce-dashboard) and has a complete integration with Stripe.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+<br>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Table of Contents  
+-  [Tech Stack](https://github.com/salvatorequagliariello/timeless-shop/blob/main/README.md#tech-stack)
+-  [Overview](https://github.com/salvatorequagliariello/timeless-shop/blob/main/README.md#overview)
+-  [Features](https://github.com/salvatorequagliariello/timeless-shop/blob/main/README.md#features)
+-  [Screenshots](https://github.com/salvatorequagliariello/timeless-shop/blob/main/README.md#screenshots)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<br>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Tech stack
+<div align="center"> 
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white">
+  <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)"> 
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white">
+  <img src="https://img.shields.io/badge/Stripe-626CD9?style=for-the-badge&logo=Stripe&logoColor=white">
+  <img src="https://img.shields.io/badge/next%20js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white">
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white">
+  <img src="https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white">
+</div>
+<br>
 
-## Learn More
+## Overview
+The TIMELESS E-shop is a responsive web-app built with NextJS and written in TypeScript, so it can be easily refactored or manteined. The entire application is managed by my CMS, which send data about products, categories, and billboards to the site via API.
 
-To learn more about Next.js, take a look at the following resources:
+The styling of the site is based on TailwindCSS, and in addition to being fully responsive, there is a Light/Dark theme mode that automatically sets itself according to the preferences of the operating system on which it is displayed.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Once on the e-commerce it is possible to browse through the different collections or filter search results by material, strap material, or movement type.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+It is then possible to click on a specific timepiece to see its history and features in more detail, admire its shape, or simply to purchase it. The E-commerce shopping cart allows customers to "buy" the watches they choose, thanks to the integration with Stripe, which will fully simulate the purchase phase. 
 
-## Deploy on Vercel
+<br>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Features
+- Manage multiple stores with a single account
+- Fully responsive
+- Stripe integration for payments reports and details
+- Light/Dark mode
+- Serverless database
+- Easy to scale or refactor
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<br>
