@@ -13,7 +13,7 @@ An E-commerce web-app built with React and NextJS and wrote in TypeScript for a 
 ## Table of Contents  
 -  [Tech Stack](https://github.com/salvatorequagliariello/timeless-shop/blob/main/README.md#tech-stack)
 -  [Overview](https://github.com/salvatorequagliariello/timeless-shop/blob/main/README.md#overview)
--  [Screenshots](https://github.com/salvatorequagliariello/timeless-shop/blob/main/README.md#screenshots)
+-  [Showcase](https://github.com/salvatorequagliariello/timeless-shop/blob/main/README.md#showcase)
 
 <br>
 
@@ -30,7 +30,7 @@ An E-commerce web-app built with React and NextJS and wrote in TypeScript for a 
 <br>
 
 ## Overview
-The TIMELESS E-shop is a responsive web-app built with NextJS and written in TypeScript, so it can be easily refactored or manteined. The entire application is managed by my CMS, which send data about products, categories, and billboards to the site via API.
+The TIMELESS E-shop is a responsive web-app built with NextJS and written in TypeScript, so it can be easily refactored or manteined. The entire application is managed by my CMS, which send data about products, categories and billboards to the website via API.
 
 The styling of the site is based on TailwindCSS, and in addition to being fully responsive, there is a Light/Dark theme mode that automatically sets itself according to the preferences of the operating system on which it is displayed.
 
@@ -40,8 +40,25 @@ It is then possible to click on a specific timepiece to see its history and feat
 
 <br>
 
-## Screenshots
+## Showcase
+![Nuovo progetto](https://github.com/salvatorequagliariello/timeless-shop/assets/109867120/f31cbccf-daf8-441e-99ce-e844319131fa)
+> The homepage of the TIMELESS E-commerce, in both light and dark theme. The homepage consists of a banner with a carousel of videos, each representing a different Collection, and best-selling products. 
 
+<br>
 
+![Nuovo progetto (1)](https://github.com/salvatorequagliariello/timeless-shop/assets/109867120/93c8500a-6f51-450a-b135-c15ef2cead10)
+> The 'Watches' menu, in desktop and mobile layout, allows customers to easily navigate between different Collections. Each Collection has its own page, where customers can read about the target audience and browse through different timepieces.  
+
+<br>
+
+![Nuovo progetto (2)](https://github.com/salvatorequagliariello/timeless-shop/assets/109867120/dd37910b-f3a1-4b2f-bc8f-dec67b961fe5)
+> In the "Our Maison" section, you can read about the history of TIMELESS, its know-how and the philosophy behind the company.
+ 
+> Each product has its own page where you can admire its case and movement, read about its features, the story behind its fame, or simply add it to your cart.
+
+<br>
+
+![Nuovo progetto (3)](https://github.com/salvatorequagliariello/timeless-shop/assets/109867120/defb53a6-61f5-4d43-8306-2a892cb791a8)
+> On the cart page, customers can review the watches they would like to buy, remove them from the cart, see the total, or proceed to the checkout managed by Stripe.
 
 <br>
