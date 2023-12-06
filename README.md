@@ -32,7 +32,7 @@ An E-commerce web-app built with React and NextJS and wrote in TypeScript for a 
 ## Overview
 The TIMELESS E-shop is a responsive web-app built with [NextJS](https://nextjs.org), [React](https://react.dev) and written in [TypeScript](https://www.typescriptlang.org/), so it can be easily refactored or manteined. The entire application is managed by my [CMS](https://github.com/salvatorequagliariello/ecommerce-dashboard), which send data about products, categories and billboards to the website via API.
 
-The styling of the site is based on [TailwindCSS](https://tailwindcss.com/), and in addition to being fully responsive, there is a Light/Dark theme mode that automatically sets itself according to the preferences of the operating system on which it is displayed.
+The styling of the website is based on [TailwindCSS](https://tailwindcss.com/), and in addition to being fully responsive, there is a Light/Dark theme mode that automatically sets itself according to the preferences of the operating system on which it is displayed.
 
 Once on the e-commerce it is possible to browse through the different collections or filter search results by material, strap material, or movement type.
 
